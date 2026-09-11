@@ -63,3 +63,23 @@ formulario.addEventListener("submit", function (evento) {
   // Limpiar el formulario para el siguiente cliente
   formulario.reset();
 });
+
+// Renderizado de la factura
+function actualizarInterfaz(cliente) {
+  // Mostrar estadísticas
+  document.getElementById("statsClientes").innerText =
+    `Total de clientes atendidos: ${listaClientes.length}`;
+  document.getElementById("fechaSistema").innerText =
+    `Fecha del sistema: ${cliente.fecha}`;
+
+  // Mostrar detalle de la factura del último cliente registrado
+  const contenedorFactura = document.getElementById("detalleFactura");
+  contenedorFactura.innerHTML = `
+        <h4>Última Factura Generada:</h4>
+        <p><strong>Cliente:</strong> ${cliente.nombre}</p>
+        <p><strong>Correo:</strong> ${cliente.correo}</p>
+        <p><strong>Vehiculo:</strong> ${cliente.vehiculo.marca} (${cliente.vehiculo.tipo.toUpperCase()})</p>
+        <p><strong>Combustible:</strong> ${cliente.compra.combustible.toUpperCase()} (${cliente.compra.galones} galones)</p>
+        <p><strong>VENTA TOTAL:</strong> $${cliente.compra.total.toFixed(2)}</p>
+    `;
+}

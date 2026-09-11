@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Problema_01</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Problema_01</h1>
+
+        <form id="formTest">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="inputPiloto">Nombre: </label>
+                        <input type="text" class="form-control" id="inputPiloto" placeholder="Ej. Max Verstappen">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="inputMarca">Marca: </label>
+                        <input type="text" class="form-control" id="inputMarca" placeholder="Ej. Red Bull">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="inputVelocidad">Velocidad (km/h): </label>
+                        <input type="number" class="form-control" id="inputVelocidad" placeholder="Ej. 250" min="0">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btnIngresar">Agregar</button>
+
+        </form>
+
+        <hr>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Piloto</th>
+                    <th>Marca</th>
+                    <th>Velocidad</th>
+                    <th>Resultados</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaBody">
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

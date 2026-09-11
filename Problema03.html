@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Problema_03</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Problema_03</h1>
+
+        <form id="formAnimal">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="inputNombre">Nombre: </label>
+                        <input type="text" class="form-control" id="inputNombre" placeholder="Ej. Mauricio">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="selectEspecie">Especie: </label>
+                        <select class="form-control" id="selectEspecie">
+                            <option>León</option>
+                            <option>Tigre</option>
+                            <option>Elefante</option>
+                            <option>Jirafa</option>
+                            <option>Capibara</option>
+                            <option>Cebra</option>
+                            <option>Mono</option>
+                            <option>Oso</option>
+                            <option>Cocodrilo</option>
+                            <option>Nutria</option>
+                            <option>Pantera</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="selectHabitat">Hábitat: </label>
+                        <select class="form-control" id="selectHabitat">
+                            <option>Sabana</option>
+                            <option>Selva</option>
+                            <option>Bosque</option>
+                            <option>Desierto</option>
+                            <option>Río</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="selectAlimentacion">Alimentación: </label>
+                        <select class="form-control" id="selectAlimentacion">
+                            <option>Herbívoro</option>
+                            <option>Carnívoro</option>
+                            <option>Omnívoro</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btnAgregar">Agregar</button>
+        </form>
+
+        <hr>
+        <p>Animales registrados: <strong id="strongContador">0</strong></p>
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Especie</th>
+                    <th>Hábitat</th>
+                    <th>Alimentación</th>
+                    <th>Costo mensual</th>
+                    <th>Fecha registro</th>
+                    <th>Acciones</th>
+                </tr>
+
+            </thead>
+            <tbody id="tablaBody"></tbody>
+        </table>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
